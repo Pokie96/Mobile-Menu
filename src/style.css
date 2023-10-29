@@ -1,18 +1,110 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+header {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: burlywood;
+    padding: 1rem 4rem 2rem;
+    max-width: 64rem;
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+  }
 
-body{
-    background-color: white;
-}
-
-.nav-list{
+  nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    position: relative;
     align-items: center;
-    min-width: 450px;
-    min-height: 25px;
-    list-style-type: none;
-}
+    justify-content: center;
+  }
+
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  li {
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    color: inherit;
+  }
+
+  a:focus {
+    outline: 2px dashed white;
+    outline-offset: 0.25rem;
+  }
+
+  ul a:hover {
+    transform: rotate(-3deg);
+  }
+
+  .nav__more-item {
+    padding-top: 1rem;
+  }
+  
+  .nav__more-item a:hover {
+    background: darkslategray;
+    color: burlywood;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+  }
+
+  .secondary-nav__list {
+    position: absolute;
+    top: 75%;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-7%);
+    border-radius: 0.77rem;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    background-color: darkslategray;
+    padding: 1rem 2rem 2rem;
+    min-width: 5rem;
+    height: auto;
+    color: burlywood;
+  }
+
+  .secondary-nav__list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid darkslategray;
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  .secondary-nav__list li {
+    padding-left: 0;
+  }
+  
